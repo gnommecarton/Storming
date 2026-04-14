@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storming AI</title>
+<style>
+body {margin:0;font-family:Arial;background:#0f0f1a;color:white;}
+header {padding:20px;text-align:center;background:linear-gradient(90deg,purple,blue);}
+#chat {height:70vh;overflow:auto;padding:10px;}
+.inputBox {display:flex;padding:10px;}
+input {flex:1;padding:10px;border:none;border-radius:10px;}
+button {margin-left:10px;padding:10px;border:none;border-radius:10px;background:purple;color:white;}
+</style>
+</head>
+<body>
+
+<header>⚡ Storming AI</header>
+
+<div id="chat"></div>
+
+<div class="inputBox">
+<input id="input" placeholder="Pose ta question...">
+<button onclick="send()">Envoyer</button>
+</div>
+
+<script>
+function send(){
+let input=document.getElementById("input");
+let chat=document.getElementById("chat");
+
+chat.innerHTML += "<p>👤 "+input.value+"</p>";
+chat.innerHTML += "<p>🤖 Réponse IA simulée à : "+input.value+"</p>";
+
+input.value="";
+}
+</script>
+
+</body>
+</html>
